@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tom Zdan Web-Dev</title>
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Font Awsome -->
+		<script
+			src="https://kit.fontawesome.com/a7bcfeba04.js"
+			crossorigin="anonymous"
+		></script>
+		<!-- CSS -->
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+	<body class="page">
+		<div class="shadow">
+			<!--Header Mobile  -->
+			<header class="header">
+				<h1 class="header__title">home</h1>
+				<button
+					class="hamburger hamburger--elastic"
+					data-aos="fade-left"
+					type="button"
+				>
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
+			</header>
+
+			<!-- Navigation -->
+			<nav class="nav">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a href="#home" class="nav__link">home</a>
+					</li>
+					<li class="nav__item">
+						<a href="#portfolio" class="nav__link">portfolio</a>
+					</li>
+					<li class="nav__item">
+						<a href="#about-me" class="nav__link">about me</a>
+					</li>
+					<li class="nav__item">
+						<a href="#contact" class="nav__link">contact</a>
+					</li>
+				</ul>
+			</nav>
+
+			<!-- Banner Section -->
+			<section id="home" class="section banner">
+				<!-- Banner Titles -->
+				<div class="banner__text-container">
+					<h1 class="banner__title">Web Desing</h1>
+					<h2 class="banner__subtitle">Tom Zdan</h2>
+				</div>
+			</section>
+
+			<!-- Portfolio Section -->
+			<section id="portfolio" class="section portfolio">
+				<div class="portfolio__products-container">
+					<div class="portfolio__product
+					product">
+						<img src="./img/portfolio-webSites.jpeg" alt="" class="product__image">
+						<h3 class="product__subtitle">websites</h3>
+					</div>
+					<div class="portfolio__product product">
+						<img src="./img/portfolio-webApps.jpeg" alt="" class="product__image">
+						<h3 class="product__subtitle">web apps</h3>
+					</div>
+				</div>
+			</section>
+
+			<!-- About Me Section -->
+			<section id="about-me" class="section about-me">
+					<p class="about-me__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero modi eum id esse quibusdam minima animi? Blanditiis deleniti totam distinctio error nihil, repellendus cum eum saepe perspiciatis possimus natus veniam fuga architecto, suscipit tempora fugiat ratione quis ad odio quibusdam? Modi quidem nisi nemo, facere enim, sit, odit eveniet doloribus tempore maiores repellendus. </p>
+					<div class="about-me__icons-container">
+						<div class="icon">
+							<i class="icon__img fa-brands fa-html5"></i>
+							<h3 class="icon__title">HTML</h3>
+						</div>
+						<div class="icon">
+							<i class="icon__img fa-brands fa-css3-alt"></i>
+							<h3 class="icon__title">CSS</h3>
+						</div>
+						<div class="icon">
+							<i class="icon__img fa-brands fa-js"></i>
+							<h3 class="icon__title">JS</h3>
+						</div>
+					</div>
+					<p class="about-me__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque adipisci necessitatibus ex ullam et perferendis libero id sint, molestias aspernatur, vitae reprehenderit alias amet rerum enim suscipit ipsa nihil quos sed velit nemo doloribus? At magni consectetur, obcaecati cupiditate harum suscipit cum minus ipsa earum quibusdam!</p>
+			</section>
+
+			<!-- CONTACT SECTION -->
+			<section id="contact" class="section contact">
+				<form action="" class="contact__form">
+					<div class="contact__container">
+						<label for="name" class="contact__form-label">name:</label>
+						<input id="name" type="text" class="contact__form-input">
+					</div>
+					<div class="contact__container">
+						<label for="email" class="contact__form-label">email:</label>
+						<input id="email" type="email" class="contact__form-input">
+					</div>
+					<div class="contact__container ">
+						<label for="message" class="contact__form-label">message:</label>
+						<textarea id="message" class="contact__form-textarea" cols="30" rows="10"></textarea>
+					</div>
+				</form>
+			</section>
+
+			<!-- Footer -->
+			<!-- <footer class="footer">
+				<p class="footer__copyright">
+					&copy; <span class="footer__year"></span>TomZdan
+				</p>
+			</footer> -->
+		</div>
+
+		<!-- JS files -->
+		<script src="./js/script.js"></script>
+	</body>
+</html>

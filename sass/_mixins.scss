@@ -1,0 +1,26 @@
+@use './colors' as *;
+
+@mixin focus {
+	outline: 1px solid $main-bright;
+}
+@mixin active {
+	outline: none;
+	background: none;
+}
+
+@mixin absolute-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin form-styling {
+	padding: 10px 20px;
+	width: 90%;
+	color: $main-bright;
+	font-size: 1.2rem;
+	font-family: inherit;
+	background-color: $bg-shadow;
+	border: none;
+}

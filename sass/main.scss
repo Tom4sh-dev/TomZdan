@@ -1,0 +1,247 @@
+@use './colors' as *;
+@use './mixins' as *;
+@use './hamburger' as *;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font-family: 'Oswald', sans-serif;
+	font-size: 10px;
+	background: url(/img/bg-image.jpg) no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+	color: $main-bright;
+	overflow-x: hidden;
+}
+
+.shadow {
+	width: 100vw;
+	background-color: $bg-shadow;
+}
+
+.section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 5%;
+	height: 100vh;
+	width: 100vw;
+	transform: translateX(0);
+	transition: transform 0.5s;
+	&--hide {
+		transform: translateX(100%);
+	}
+}
+
+// HEADER
+.header {
+	position: fixed;
+	width: 100vw;
+	height: 100px;
+	z-index: 10;
+	&__title {
+		margin-left: 40px;
+		line-height: 100px;
+		text-transform: uppercase;
+		font-weight: normal;
+		font-size: 2rem;
+		transition: transform 0.5s;
+		&--hide {
+			transform: translateX(-100%);
+		}
+	}
+
+	.hamburger {
+		position: absolute;
+		top: 0;
+		top: 30px;
+		right: 30px;
+		z-index: 10;
+		&:focus {
+			@include focus;
+		}
+		&:active {
+			@include active;
+		}
+	}
+}
+
+// NAVIGATION
+.nav {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	background-color: $bg-shadow;
+	z-index: 1;
+	transform: translateX(-100%);
+	transition: transform 0.5s ease;
+	&--mobile-active {
+		transform: translateX(0);
+	}
+	&__list {
+		@include absolute-center;
+		list-style: none;
+	}
+	&__item {
+		margin: 20% 0;
+	}
+	&__link {
+		display: inline-block;
+		padding: 10px;
+		color: $main-bright;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 2rem;
+		letter-spacing: 5px;
+		transition: transform 0.3s;
+		&:hover {
+			transform: translateX(10px);
+		}
+
+		&:focus {
+			@include focus;
+		}
+		&:active {
+			@include active;
+		}
+	}
+}
+
+// BANNER
+.banner {
+	position: relative;
+	&__text-container {
+		text-transform: uppercase;
+		text-align: center;
+	}
+	&__title {
+		margin: 20px 0;
+		font-size: 3rem;
+		font-weight: 300;
+		letter-spacing: 5px;
+	}
+	&__subtitle {
+		font-size: 2rem;
+		font-weight: 300;
+		letter-spacing: 10px;
+	}
+}
+
+// PORTFOLIO
+.portfolio {
+	&__products-container {
+		position: relative;
+		width: 75%;
+		max-width: 400px;
+	}
+
+	.product {
+		position: relative;
+		margin: 20% auto;
+		width: 100%;
+		box-shadow: 0 0 10px -2px rgba($color: #000000, $alpha: 0.4);
+		cursor: pointer;
+		transition: scale 0.3s;
+		&:hover {
+			scale: 1.05;
+		}
+		&__image {
+			width: 100%;
+		}
+		&__subtitle {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			white-space: nowrap;
+			text-transform: uppercase;
+			font-size: 2rem;
+			font-weight: 300;
+			letter-spacing: 5px;
+			background-color: $bg-shadow;
+		}
+	}
+}
+
+// ABOUT ME
+.about-me {
+	&__text {
+		padding: 20px;
+		font-size: 1rem;
+		letter-spacing: 2px;
+	}
+	&__icons-container {
+		display: flex;
+		margin: 30px;
+		padding: 10px;
+		background-color: $bg-shadow;
+		box-shadow: 0 0 10px 5px rgba($color: #000000, $alpha: 0.4);
+	}
+	.icon {
+		margin: auto 20px;
+		text-align: center;
+		&__img {
+			font-size: 4rem;
+		}
+		&__title {
+			font-size: 1.2rem;
+			font-weight: 300;
+			letter-spacing: 5px;
+		}
+	}
+}
+
+// CONTACT
+.contact {
+	&__form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		max-width: 500px;
+	}
+	&__container {
+		position: relative;
+		margin: 0 auto;
+		padding: 10px;
+		width: 100%;
+	}
+	&__form-label {
+		position: absolute;
+		top: 15px;
+		left: 20px;
+		text-transform: uppercase;
+		font-size: 1rem;
+		letter-spacing: 5px;
+	}
+	&__form-input {
+		@include form-styling;
+		&:focus {
+			@include focus;
+		}
+		&:active {
+			@include active;
+		}
+	}
+	&__form-textarea {
+		@include form-styling;
+		&:focus {
+			@include focus;
+		}
+		&:active {
+			@include active;
+		}
+	}
+}
+
+@import './large';
