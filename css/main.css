@@ -116,7 +116,7 @@ html {
 }
 
 body {
-  background: url("../img/bg-image-1000.jpg") no-repeat center;
+  background: url("../img/bg-image-1000.jpg") no-repeat top;
   background-size: auto 100vh;
   background-attachment: fixed;
   color: #fafafa;
