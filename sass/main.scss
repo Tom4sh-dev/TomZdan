@@ -13,7 +13,7 @@ html {
 body {
 	font-family: 'Oswald', sans-serif;
 	font-size: 10px;
-	background: url(/img/bg-image.jpg) no-repeat center;
+	background: url(/img/bg-image-640.jpg) no-repeat center;
 	background-size: cover;
 	background-attachment: fixed;
 	color: $main-bright;
@@ -31,7 +31,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	padding: 5%;
-	height: 100vh;
+	min-height: 100vh;
 	width: 100vw;
 	transform: translateX(0);
 	transition: transform 0.5s;

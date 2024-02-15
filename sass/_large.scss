@@ -3,6 +3,8 @@
 @use './hamburger' as *;
 
 @media (min-width: 992px) {
+	body {
+		background: url(/img/bg-image-1000.jpg) no-repeat center;}
 	.section {
 		width: 60vw;
 		margin-left: 40vw;
