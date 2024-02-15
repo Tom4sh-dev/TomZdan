@@ -11,12 +11,13 @@ html {
 	scroll-behavior: smooth;
 }
 body {
-	font-family: 'Oswald', sans-serif;
-	font-size: 10px;
 	background: url("../img/bg-image-1000.jpg") no-repeat center;
 	background-size: cover;
 	background-attachment: fixed;
+	height: 100vh;
 	color: $main-bright;
+	font-family: 'Oswald', sans-serif;
+	font-size: 10px;
 	overflow-x: hidden;
 }
 
