@@ -11,18 +11,16 @@ html {
 	scroll-behavior: smooth;
 }
 body {
-	background: url("../img/bg-image-1000.jpg") no-repeat top;
-	background-size: auto 100vh;
+	background: url("../img/bg-image-1000.jpg") no-repeat center;
+	background-size: cover;
 	background-attachment: fixed;
 	color: $main-bright;
 	font-family: 'Oswald', sans-serif;
 	font-size: 10px;
-	height: 100%;
 	overflow-x: hidden;
 }
 
 .shadow {
-	width: 100vw;
 	background-color: $bg-shadow;
 }
 
@@ -36,7 +34,7 @@ body {
 	width: 100vw;
 	transition: transform 0.5s;
 	&--hide {
-		transform: translateX(-100%);
+		transform: translateX(110%);
 	}
 }
 
