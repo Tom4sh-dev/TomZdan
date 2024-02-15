@@ -117,9 +117,8 @@ html {
 
 body {
   background: url("../img/bg-image-1000.jpg") no-repeat center;
-  background-size: cover;
+  background-size: auto 100vh;
   background-attachment: fixed;
-  height: 100vh;
   color: #fafafa;
   font-family: "Oswald", sans-serif;
   font-size: 10px;
