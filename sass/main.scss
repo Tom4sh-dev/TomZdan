@@ -11,23 +11,48 @@ html {
 	scroll-behavior: smooth;
 }
 body {
-	
 	color: $main-bright;
 	font-family: 'Oswald', sans-serif;
 	font-size: 10px;
 	overflow-x: hidden;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: $main-bright;
+	box-shadow: inset 0 0 20px 20px #23232329;
+}
+
+.hamburger:focus,
+a:focus,
+input:focus,
+textarea:focus {
+	@include focus
+}
+.hamburger:active,
+a:active,
+input:active, 
+textarea:active {
+ @include active
+}
+
 .bg-image {
 	position: fixed;
 	height: 100vh;
 	width: 100vw;
-	background: url("../img/bg-image-1000.jpg") no-repeat center;
+	background: url('../img/bg-image-1000.jpg') no-repeat center;
 	background-size: cover;
 	z-index: -10;
 }
 
 .shadow {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
 	background-color: $bg-shadow;
+	z-index: -1;
 }
 
 .section {
@@ -40,7 +65,7 @@ body {
 	width: 100vw;
 	transition: transform 0.5s;
 	&--hide {
-		transform: translateX(110%);
+		transform: translateX(100%);
 	}
 }
 
@@ -68,12 +93,6 @@ body {
 		top: 30px;
 		right: 30px;
 		z-index: 10;
-		&:focus {
-			@include focus;
-		}
-		&:active {
-			@include active;
-		}
 	}
 }
 
@@ -85,7 +104,7 @@ body {
 	background-color: $bg-shadow;
 	z-index: 1;
 	transform: translateX(-100%);
-	transition: transform 0.5s ease;
+	transition: transform 0.5s;
 	&--mobile-active {
 		transform: translateX(0);
 	}
@@ -107,13 +126,6 @@ body {
 		transition: transform 0.3s;
 		&:hover {
 			transform: translateX(10px);
-		}
-
-		&:focus {
-			@include focus;
-		}
-		&:active {
-			@include active;
 		}
 	}
 }
@@ -158,6 +170,7 @@ body {
 		}
 		&__image {
 			width: 100%;
+			vertical-align: middle;
 		}
 		&__subtitle {
 			position: absolute;
@@ -190,7 +203,7 @@ body {
 		margin: 30px;
 		padding: 10px;
 		background-color: $bg-shadow;
-		box-shadow: 0 0 10px 5px rgba($color: #000000, $alpha: 0.4);
+		box-shadow: 0 0 10px -2px rgba($color: #000000, $alpha: 0.4);
 	}
 	.icon {
 		margin: auto 20px;
@@ -217,9 +230,8 @@ body {
 	}
 	&__container {
 		position: relative;
-		margin: 0 auto;
 		padding: 10px;
-		width: 100%;
+		width: 100%; 
 	}
 	&__form-label {
 		position: absolute;
@@ -231,21 +243,9 @@ body {
 	}
 	&__form-input {
 		@include form-styling;
-		&:focus {
-			@include focus;
-		}
-		&:active {
-			@include active;
-		}
 	}
 	&__form-textarea {
 		@include form-styling;
-		&:focus {
-			@include focus;
-		}
-		&:active {
-			@include active;
-		}
 	}
 }
 
