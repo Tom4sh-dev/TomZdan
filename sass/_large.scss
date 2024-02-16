@@ -3,7 +3,7 @@
 @use './hamburger' as *;
 
 @media (min-width: 992px) {
-	body {
+	.bg-image {
 		background-image: url("../img/bg-image-2000.jpg");
 	}
 	.section {

@@ -11,13 +11,19 @@ html {
 	scroll-behavior: smooth;
 }
 body {
-	background: url("../img/bg-image-1000.jpg") no-repeat center;
-	background-size: cover;
-	background-attachment: fixed;
+	
 	color: $main-bright;
 	font-family: 'Oswald', sans-serif;
 	font-size: 10px;
 	overflow-x: hidden;
+}
+.bg-image {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	background: url("../img/bg-image-1000.jpg") no-repeat center;
+	background-size: cover;
+	z-index: -10;
 }
 
 .shadow {
